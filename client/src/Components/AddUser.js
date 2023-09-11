@@ -13,7 +13,7 @@ const AddUser = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('/create-user', { name, city })
+        axios.post('https://vercel-crud-backend.vercel.app/create-user', { name, city })
             .then(response => {
                 console.log('Submit response - ', response);
                 navigate("/");
