@@ -10,7 +10,13 @@ const cors = require('cors');
 const app = express();
 const UserModel = require('./models/users');
 
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://vercel-crud.vercel.app/"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 app.use(express.json());
 
 mongoose.connect("mongodb+srv://pradeepbaggadelhi:p2gH9kPpcj14molb@cluster0.dtkb6tc.mongodb.net/nameLists");
