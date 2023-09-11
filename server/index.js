@@ -13,7 +13,7 @@ const UserModel = require('./models/users');
 app.use(cors(
     {
         origin: ["https://vercel-crud-frontend.vercel.app"],
-        methods: ["POST", "GET", "PUT"],
+        methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
 ));
