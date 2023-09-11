@@ -14,7 +14,7 @@ const UpdateUser = () => {
 
     useEffect(() => {
         console.log('ID - ', id)
-        axios.get(`/user/${id}`)
+        axios.get(`https://vercel-crud-backend.vercel.app/user/${id}`)
             .then(res => {
                 console.log('Get user - ', res);
                 setName(res.data.name);
@@ -28,7 +28,7 @@ const UpdateUser = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.put(`/update/${id}`, { name, city })
+        axios.put(`https://vercel-crud-backend.vercel.app/update/${id}`, { name, city })
             .then(response => {
                 console.log('Submit response - ', response);
                 navigate("/");
