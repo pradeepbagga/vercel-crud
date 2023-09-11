@@ -19,7 +19,8 @@ app.use(cors(
 ));
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://pradeepbaggadelhi:p2gH9kPpcj14molb@cluster0.dtkb6tc.mongodb.net/nameLists");
+// mongoose.connect("mongodb+srv://pradeepbaggadelhi:p2gH9kPpcj14molb@cluster0.dtkb6tc.mongodb.net/nameLists");
+mongoose.connect("mongodb+srv://pradeepbaggadelhi:p2gH9kPpcj14molb@cluster0.dtkb6tc.mongodb.net/nameLists?retryWrites=true&w=majority");
 mongoose.connection.on("connected", () => {
     console.log('Connected to DATABASE.');
 });
