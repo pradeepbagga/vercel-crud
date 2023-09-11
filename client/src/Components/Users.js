@@ -9,7 +9,7 @@ const Users = () => {
   useEffect(() => {
     console.log('users - ', users);
 
-    axios.get("/users")
+    axios.get("https://vercel-crud-backend.vercel.app/users")
       .then(response => {
         console.log('API Response - ', response.data);
         setUsers(response.data);
@@ -22,7 +22,7 @@ const Users = () => {
 
   const handleDelete = (id) => {
     console.log('handle Delete - ', id);
-    axios.delete(`/delete/${id}`)
+    axios.delete(`https://vercel-crud-backend.vercel.app/delete/${id}`)
     .then((res) => {
       console.log('Delete response', res)
     })
